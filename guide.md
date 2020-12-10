@@ -2589,20 +2589,20 @@ Here is the list of possibilities (this is a general list and many of those coun
 
 ## Overview:
 
-  Service      Against ToS   Require Phone   Require E-Mail   VPN Sign-up   Tor Sign-up   Captchas   ID Verification   Facial verification   Overall difficulty
-  ------------ ------------- --------------- ---------------- ------------- ------------- ---------- ----------------- --------------------- --------------------
-  Discord      No            No              Yes              Yes           Yes           No         No                No                    Medium
-  Facebook     Yes           Yes             Yes              Maybe         Maybe         Yes        Maybe             Maybe                 Hard
-  GitHub       No            No              Yes              Yes           Yes           Yes        No                No                    Easy
-  Google       No            Maybe           Maybe            Yes           Yes           Yes        No                No                    Medium
-  Instagram    Yes           Maybe           Yes              Yes           Yes           Yes        No                Maybe                 Medium
-  LinkedIn     Yes           Yes             Yes              Yes           Yes           Yes        Maybe             Maybe                 Hard
-  Microsoft    Yes           Maybe           Maybe            Yes           Yes           Yes        No                No                    Medium
-  ProtonMail   No            Maybe           Maybe            Yes           Yes           Yes        No                No                    Medium
-  Reddit       No            No              No               Yes           Yes           No         No                No                    Easy
-  Telegram     No            Yes             No               Yes           Yes           No         No                No                    Easy
-  Twitter      No            Maybe           Yes              Yes           Yes           Yes        No                No                    Medium
-  4chan        No            No              No               No            No            Yes        No                No                    Hard
+| Service    | Against ToS | Require Phone | Require E-Mail | VPN Sign-up | Tor Sign-up | Captchas | ID Verification | Facial verification | Overall difficulty |
+|------------|-------------|---------------|----------------|-------------|-------------|----------|-----------------|---------------------|--------------------|
+| Discord    | No          | No            | Yes            | Yes         | Yes         | No       | No              | No                  | Medium             |
+| Facebook   | Yes         | Yes           | Yes            | Maybe       | Maybe       | Yes      | Maybe           | Maybe               | Hard               |
+| GitHub     | No          | No            | Yes            | Yes         | Yes         | Yes      | No              | No                  | Easy               |
+| Google     | No          | Maybe         | Maybe          | Yes         | Yes         | Yes      | No              | No                  | Medium             |
+| Instagram  | Yes         | Maybe         | Yes            | Yes         | Yes         | Yes      | No              | Maybe               | Medium             |
+| LinkedIn   | Yes         | Yes           | Yes            | Yes         | Yes         | Yes      | Maybe           | Maybe               | Hard               |
+| Microsoft  | Yes         | Maybe         | Maybe          | Yes         | Yes         | Yes      | No              | No                  | Medium             |
+| ProtonMail | No          | Maybe         | Maybe          | Yes         | Yes         | Yes      | No              | No                  | Medium             |
+| Reddit     | No          | No            | No             | Yes         | Yes         | No       | No              | No                  | Easy               |
+| Telegram   | No          | Yes           | No             | Yes         | Yes         | No       | No              | No                  | Easy               |
+| Twitter    | No          | Maybe         | Yes            | Yes         | Yes         | Yes      | No              | No                  | Medium             |
+| 4chan      | No          | No            | No             | No          | No          | Yes      | No              | No                  | Hard               |
 
 ## Discord:
 
