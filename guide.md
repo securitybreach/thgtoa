@@ -78,17 +78,18 @@
         -   [Manual reviews:]
     -   [Getting Online:]
     -   [Creating new identities:]
-    -   [ProtonMail:]
-    -   [Google:]
-    -   [Twitter:]
-    -   [LinkedIn:]
-    -   [Microsoft:]
-    -   [Instagram:]
+    -   [Overview:]
+    -   [Discord:]
     -   [Facebook:]
     -   [GitHub:]
-    -   [Discord:]
-    -   [Telegram:]
+    -   [Google:]
+    -   [Instagram:]
+    -   [LinkedIn:]
+    -   [Microsoft:]
+    -   [ProtonMail:]
     -   [Reddit:]
+    -   [Telegram:]
+    -   [Twitter:]
     -   [4chan:]
     -   [Crypto Wallets:]
     -   [What about those mobile only apps (Whatsapp/Signal):]
@@ -118,7 +119,9 @@
 -   [Appendix B: (Windows Additional Privacy Settings)]
 -   [Appendix C: (Windows Installation Media Creation)]
 
-Version 0.1.8 (draft), December 2020 (work in progress, some parts are incomplete) by AnonymousPlanet
+(or "How I learned to start worrying and love privacy")
+
+Version 0.1.9 (draft), December 2020 (work in progress, some parts are incomplete) by AnonymousPlanet.
 
 This guide is open-source, licensed under Creative Commons Attribution 4.0 International (cc-by-4.0).
 
@@ -2066,7 +2069,7 @@ I will help you bit by listing a few tips I learned while doing research over th
 
 -   Adapt your language/writing to the identity to not raise suspicions and lower your chances of being fingerprinted by online platforms. Be especially careful with using pedantic words and figures of speech/quotes that could allow some people to guess your writing is very similar to that person with this Twitter handle or this Reddit user.
 
--   Consider using the recommended tools on <https://privacytools.io/> for your various purposes.
+-   **Consider using the recommended tools on <https://privacytools.io/> for your various purposes instead of the usual mainstream tools.**
 
 Note: If you're having trouble finding an Exit node in the country of your choice you can force using specific countries for Exit Nodes (and therefore exit countries) on Tor by editing the torrc file on the Whonix Gateway or even the Tor Browser:
 
@@ -2584,193 +2587,32 @@ Here is the list of possibilities (this is a general list and many of those coun
 
 -   ZIMBABWE {zw}
 
-## ProtonMail:
-
--   Is this against their TOS? No [https://ProtonMail.com/terms-and-conditions]
-
--   Will they require a phone number? Maybe. This depends on the IP you're coming from. If you come from Tor, it's likely. From a VPN, it's less likely.
-
--   Can you create accounts through Tor? Yes but very likely that a phone number will be required when only an e-mail will be over a VPN.
-
-You obviously need an e-mail for your online identity and disposable e-mails are pretty much banned everywhere.
-
-ProtonMail is a free e-mail provider based in Switzerland that advocates security and privacy.
-
-They're recommended by privacytools.io[^203]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
-
-They claim they do not store/link the phone/e-mail associated with the registration but only store a hash that is not linked to the account[^204]. As long as their claim is true and the hash is not linked to your account, and that you followed my guide regarding the Burner phone and the pre-paid SIM card, you should be safe from tracking.
-
-Create this e-mail account first using the burner phone as verification if necessary.
-
-When you're done creating the account, please go into the settings and enable 2FA (Two Factor Authentication). You will use KeePassXC TOTP feature (create a new entry "Identity ProtonMail TOTP" and just use the TOTP menu to set it up). Save the rescue codes within your KeePassXC entry.
-
-This e-mail account will be used in the next step for creating a Google/Gmail account.
-
-## Google:
-
--   Is this against their TOS? No <https://policies.google.com/terms>
-
--   Will they require a phone number? Yes they will. There is no escape here.
-
--   Can you create accounts through Tor? Yes but expect some captchas and your phone number will definitely be required
-
-ProtonMail is good ... but to appear less suspicious, it's just better to also have a Google Mail account.
-
-As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^205]'[^206].
-
-From my experience during my research, this count is limited to 3 accounts / phone number. If you are unlucky with your number (if it was previously used by another mobile user), it might be less.
-
-You should therefore use again your burner phone and pre-paid SIM card to create the account. Don't forget to use the identity details you made up earlier (birthdate). When the account is created, please do take some time to do the following:
-
--   Log into Google Mail and Go into the Gmail Settings \> Go into the mail Forwarding options \> Set up a mail forwarding to your ProtonMail Address \> Verify (using ProtonMail) \> Go back to Gmail and set the forwarding to forward and delete Google copy \> Save. This step will allow you to check your Google Mail using ProtonMail instead and will allow you to avoid triggering Google Security checks by Logging in from various VPN/Tor exit IP addresses in the future while storing your sensitive e-mail at ProtonMail instead.
-
--   Enable 2FA within the Google account settings. Firs you'll have to enable 2FA using the Burner phone \> Then you'll see the option appear to enable 2FA using an Authenticator app. Use that option and set it up with a new KeePassXC TOTP entry. When it's done, remove the phone 2FA from the Google account. This will prevent someone from using that phone number in the future (when you don't have it anymore) to recover/gain access to that account.
-
--   Add ProtonMail as a recovery e-mail address for the account.
-
--   Remove the phone number from the account details as a recovery option.
-
--   Upload a Google profile picture you made earlier during the identity creation step.
-
--   Review the Google Privacy settings to disable as much as you can:
-
-    -   Activity logging
-
-    -   YouTube
-
--   Log out and don't touch it unless needed (as mentioned, you will use ProtonMail to check your Gmail).
-
-Keep in mind that there are different algorithms in place to check for weird activity. If you receive any mail (on ProtonMail) prompting about a Google Security Warning. Click it and Click the button to say "Yes it was me". It helps.
-
-Do not use that account for "sign-up with Google" anywhere unless necessary.
-
-Be extremely careful if you decide to use the account for Google activities (such as Google Maps reviews or YouTube Comments) as those can easily trigger some checks (Negative reviews, Comments breaking Community Guidelines on YouTube).
-
-If your account gets suspended [^207] (this can happen on sign-up, after signing-up or after using it in some Google services), you can still get it unsuspended by submitting[^208] an appeal/verification (which will again require your Phone number and possibly an e-mail contact with Google support with the reason). Suspension of the account does not disable the e-mail forwarding but suspended account will be deleted after a while.
-
-After suspension, if your Google account is restored, you should be fine.
-
-If your account gets banned, you will have no appeal and the forwarding will be disabled. Your phone number will be flagged and you won't be able to use it to sign-up on a different account. Be careful.
-
-## Twitter:
-
--   Is this against their TOS? No <https://twitter.com/en/tos>
-
--   Will they require a phone number? They might not at sign-up but they will just after sign-up or a week or so later.
-
--   Can you create accounts through Tor? Yes but expect some captchas and your phone number will definitely be required
-
-Twitter is extremely aggressive in preventing anonymity on their network. You should sign-up using e-mail and password (not phone) and not using "Sign-in with Google". Use your Gmail as the e-mail address.
-
-More than likely, your account will be suspended immediately during the sign-up process and will require you to complete a series of automated tests to unlock. This will include a series of captchas, confirmation of your e-mail and twitter handle or other information. In some cases, it will also require your phone number.
-
-In some cases, despite you selecting a text verification, Twitter verification system will call the phone no matter what. In that case you'll have to pick up and actually hear the verification code. I suspect this is another method of preventing automated systems and malicious users from selling text receiving services over the internet.
-
-Twitter will store all this information and link it to your account including your IP, e-mail and phone number. You will not be able that phone number to create a different account.
-
-Once the account is restored, you should take some time to do the following:
-
--   Upload the identity profile picture.
-
--   Enable 2FA from the security settings using a new KeePassXC TOTP entry, save the security codes in KeePassXC as well.
-
--   Disable Photo tagging
-
--   Disable E-mail lookup
-
--   Disable Phone lookup
-
--   Disable all personalized advertising settings
-
--   Disable geolocation of tweets
-
--   Remove the phone number from the account
-
--   Follow some people based
-
--   Log out and leave it be.
-
-After about a week, you should check the twitter again and the chances are quite high that it will be suspended again for "suspicious activity" or "violating community guidelines" despite you not using it at all (not even a single tweet/follow/like/retweet or DM) but this time by another system. I call this the "Double tap".
-
-This time you will need to submit an appeal using a form [^209], provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
-
-Obviously do not reply from ProtonMail as this will raise suspicions, you have to sign-in into Gmail (unfortunately) and compose a new mail from there copy pasting the E-Mail, Subject and Content from ProtonMail. As well as a reply confirming you have access to that e-mail.
-
-After a few days, your account should get unsuspended "for good". I had no issues after that but keep in mind they can still ban your account for any reason if you violate the community guidelines. The phone number and e-mail will then be flagged and you will have no other option but to get a new identity with a new number to sign-up again. Don't use this account for trolling.
-
-## LinkedIn:
-
--   Is this against their TOS? Yes <https://www.linkedin.com/legal/user-agreement>
-
-" To use the Services, you agree that: (1) you must be the "*Minimum Age*" (described below) or older; (2) **you will only have one LinkedIn account, which must be in your real name**; and (3) you are not already restricted by LinkedIn from using the Services. **Creating an account with false information is a violation of our terms**, including accounts registered on behalf of others or persons under the age of 16. "
-
-But this clause of their TOS is illegal in Germany (see beginning of this guide).
-
--   Will they require a phone number? Yes they will.
-
--   Can you create accounts through Tor? Yes but expect some captchas and your phone number will definitely be required
-
-LinkedIn is far less aggressive than twitter but will nonetheless require a valid e-mail (preferably again your Gmail) and a phone number in most cases (tho not always).
-
-LinkedIn however is relying a lot on reports and user/customer moderation. You should not create a profile with an occupation inside a private corporations or a small startup company. The company employees are monitoring LinkedIn activity and receive notifications when new people join. They can then report your profile as fake and your profile will then be suspended or banned pending appeal.
-
-LinkedIn will then require you go through a verification process that will unfortunately require you to send an ID proof (identity card, passport, driver license). This ID verification is processed by a company called Jumio[^210] that specializes in ID proofing. This is most likely a dead end as this would force you to develop some strong Photoshop skills.
-
-Instead you are far less likely to be reported if you just stay vague (say you're a student/intern/freelance) or pretend you work for a large public institution that is too large for anyone to care of check.
-
-As with Twitter and google, you should do the following after signing-up:
-
--   Disable ads
-
--   Disable notifications
-
--   Disable lookup by phone/e-mail
-
--   Upload a picture of your identity
-
-## Microsoft:
-
--   Is this against their TOS? Yes <https://www.microsoft.com/en/servicesagreement/>
-
-"i. Creating an Account. You can create a Microsoft account by signing up online. You agree not to use any false, inaccurate or misleading information when signing up for your Microsoft account." But this clause of their TOS is illegal in Germany (see beginning of this guide).
-
--   Will they require a phone number? Maybe but not always. Even on Tor depending on your luck/exit node, it's possible that they will only require e-mail verification.
-
--   Can you create accounts through Tor? Yes you can but expect captchas, e-mail verification at least **and maybe phone verification.**
-
-So yes it's still possible to create an MS account without a phone number and using Tor or VPN but you might have cycle through a few exit nodes to achieve this.
-
-After signing-up you should setup 2FA authentication within security and using KeePassXC TOTP.
-
-## Instagram:
-
--   Is this against their TOS? Yes <https://help.instagram.com/581066165581870?ref=dp>
-
-"You can\'t impersonate others or provide inaccurate information. You don\'t have to disclose your identity on Instagram, but you must provide us with accurate and up to date information (including registration information). Also, you may not impersonate someone you aren\'t, and you can\'t create an account for someone else unless you have their express permission." But this clause of their TOS is illegal in Germany (see beginning of this guide).
-
--   Will they require a phone number? Maybe but less likely over VPN and very likely over Tor
-
--   Can you create accounts through Tor? Yes but expect some captchas and your phone number will definitely be required
-
-It's no secret that Instagram is part of Facebook however it's more lenient than Facebook when it comes to user verification. It's quite unlikely you'll get suspended or banned after signing-up. But it could help.
-
-It's also possible that they ask you to take a selfie video or picture making certain gestures to prove your identity. If that's the case, I'm afraid it's a dead end for now.
-
-For instance I noticed that you'll have less issues creating a Facebook account if you already have a valid Instagram account. You should always create an Instagram account before attempting Facebook.
-
-Unfortunately there are some limitations when using the web version of Instagram. For instance you won't be able to enable Authenticator 2FA from the web for a reason I don't understand.
-
-After sign-up, do the following:
-
--   Upload a picture of your generated identity if you want.
-
--   Go into your Settings
-
--   Make the account private (initially at least)
-
--   Do not show activity status
-
--   Do not allow sharing
+## Overview:
+
+  Service      Against ToS   Require Phone   Require E-Mail   VPN Sign-up   Tor Sign-up   Captchas   ID Verification   Facial verification   Overall difficulty
+  ------------ ------------- --------------- ---------------- ------------- ------------- ---------- ----------------- --------------------- --------------------
+  Discord      No            No              Yes              Yes           Yes           No         No                No                    Medium
+  Facebook     Yes           Yes             Yes              Maybe         Maybe         Yes        Maybe             Maybe                 Hard
+  GitHub       No            No              Yes              Yes           Yes           Yes        No                No                    Easy
+  Google       No            Maybe           Maybe            Yes           Yes           Yes        No                No                    Medium
+  Instagram    Yes           Maybe           Yes              Yes           Yes           Yes        No                Maybe                 Medium
+  LinkedIn     Yes           Yes             Yes              Yes           Yes           Yes        Maybe             Maybe                 Hard
+  Microsoft    Yes           Maybe           Maybe            Yes           Yes           Yes        No                No                    Medium
+  ProtonMail   No            Maybe           Maybe            Yes           Yes           Yes        No                No                    Medium
+  Reddit       No            No              No               Yes           Yes           No         No                No                    Easy
+  Telegram     No            Yes             No               Yes           Yes           No         No                No                    Easy
+  Twitter      No            Maybe           Yes              Yes           Yes           Yes        No                No                    Medium
+  4chan        No            No              No               No            No            Yes        No                No                    Hard
+
+## Discord:
+
+-   Is this against their TOS? No <https://discord.com/terms>
+
+-   Will they require a phone number? No they require an e-mail
+
+-   Can you create accounts through Tor? I had no issues with that so far
+
+Steps after creating: Enable 2FA authentication with KeePassXC TOTP
 
 ## Facebook:
 
@@ -2789,7 +2631,7 @@ When people stand behind their opinions and actions, our community is safer and 
 ```
 -   Will they require a phone number? Yes and probably more later
 
--   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^211] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
+-   Can you create accounts through Tor? Yes but it's very difficult and their onion address[^203] won't help. In most cases you'll just have a random error at sign-up and your account suspended after sign-in.
 
 Facebook is one of the most aggressive platforms in identity verification and is pushing hard their "real name policy". It is why this guide is only advised to German residents.
 
@@ -2837,15 +2679,159 @@ Just Sign-up with e-mail and password and enable two-factor authentication (TOTP
 
 Be sure to go into Settings \> E-Mail and make your e-mail private as well as block any push that would reveal your e-mail.
 
-## Discord:
+## Google:
 
--   Is this against their TOS? No <https://discord.com/terms>
+-   Is this against their TOS? No <https://policies.google.com/terms>
 
--   Will they require a phone number? No they require an e-mail
+-   Will they require a phone number? Yes they will. There is no escape here.
 
--   Can you create accounts through Tor? I had no issues with that so far
+-   Can you create accounts through Tor? Yes but expect some captchas and your phone number will definitely be required
 
-Steps after creating: Enable 2FA authentication with KeePassXC TOTP
+ProtonMail is good ... but to appear less suspicious, it's just better to also have a Google Mail account.
+
+As ProtonMail, Google will also most likely require a phone number during sign-up as part of their verification process. However contrary to ProtonMail, Google will store that phone number during the sign-up process and will also limit the amount of accounts that can be created during the sign-up[^204]'[^205].
+
+From my experience during my research, this count is limited to 3 accounts / phone number. If you are unlucky with your number (if it was previously used by another mobile user), it might be less.
+
+You should therefore use again your burner phone and pre-paid SIM card to create the account. Don't forget to use the identity details you made up earlier (birthdate). When the account is created, please do take some time to do the following:
+
+-   Log into Google Mail and Go into the Gmail Settings \> Go into the mail Forwarding options \> Set up a mail forwarding to your ProtonMail Address \> Verify (using ProtonMail) \> Go back to Gmail and set the forwarding to forward and delete Google copy \> Save. This step will allow you to check your Google Mail using ProtonMail instead and will allow you to avoid triggering Google Security checks by Logging in from various VPN/Tor exit IP addresses in the future while storing your sensitive e-mail at ProtonMail instead.
+
+-   Enable 2FA within the Google account settings. Firs you'll have to enable 2FA using the Burner phone \> Then you'll see the option appear to enable 2FA using an Authenticator app. Use that option and set it up with a new KeePassXC TOTP entry. When it's done, remove the phone 2FA from the Google account. This will prevent someone from using that phone number in the future (when you don't have it anymore) to recover/gain access to that account.
+
+-   Add ProtonMail as a recovery e-mail address for the account.
+
+-   Remove the phone number from the account details as a recovery option.
+
+-   Upload a Google profile picture you made earlier during the identity creation step.
+
+-   Review the Google Privacy settings to disable as much as you can:
+
+    -   Activity logging
+
+    -   YouTube
+
+-   Log out and don't touch it unless needed (as mentioned, you will use ProtonMail to check your Gmail).
+
+Keep in mind that there are different algorithms in place to check for weird activity. If you receive any mail (on ProtonMail) prompting about a Google Security Warning. Click it and Click the button to say "Yes it was me". It helps.
+
+Do not use that account for "sign-up with Google" anywhere unless necessary.
+
+Be extremely careful if you decide to use the account for Google activities (such as Google Maps reviews or YouTube Comments) as those can easily trigger some checks (Negative reviews, Comments breaking Community Guidelines on YouTube).
+
+If your account gets suspended [^206] (this can happen on sign-up, after signing-up or after using it in some Google services), you can still get it unsuspended by submitting[^207] an appeal/verification (which will again require your Phone number and possibly an e-mail contact with Google support with the reason). Suspension of the account does not disable the e-mail forwarding but suspended account will be deleted after a while.
+
+After suspension, if your Google account is restored, you should be fine.
+
+If your account gets banned, you will have no appeal and the forwarding will be disabled. Your phone number will be flagged and you won't be able to use it to sign-up on a different account. Be careful.
+
+## Instagram:
+
+-   Is this against their TOS? Yes <https://help.instagram.com/581066165581870?ref=dp>
+
+"You can\'t impersonate others or provide inaccurate information. You don\'t have to disclose your identity on Instagram, but you must provide us with accurate and up to date information (including registration information). Also, you may not impersonate someone you aren\'t, and you can\'t create an account for someone else unless you have their express permission." But this clause of their TOS is illegal in Germany (see beginning of this guide).
+
+-   Will they require a phone number? Maybe but less likely over VPN and very likely over Tor
+
+-   Can you create accounts through Tor? Yes but expect some captchas and your phone number will definitely be required
+
+It's no secret that Instagram is part of Facebook however it's more lenient than Facebook when it comes to user verification. It's quite unlikely you'll get suspended or banned after signing-up. But it could help.
+
+It's also possible that they ask you to take a selfie video or picture making certain gestures to prove your identity. If that's the case, I'm afraid it's a dead end for now.
+
+For instance I noticed that you'll have less issues creating a Facebook account if you already have a valid Instagram account. You should always create an Instagram account before attempting Facebook.
+
+Unfortunately there are some limitations when using the web version of Instagram. For instance you won't be able to enable Authenticator 2FA from the web for a reason I don't understand.
+
+After sign-up, do the following:
+
+-   Upload a picture of your generated identity if you want.
+
+-   Go into your Settings
+
+-   Make the account private (initially at least)
+
+-   Do not show activity status
+
+-   Do not allow sharing
+
+## LinkedIn:
+
+-   Is this against their TOS? Yes <https://www.linkedin.com/legal/user-agreement>
+
+" To use the Services, you agree that: (1) you must be the "*Minimum Age*" (described below) or older; (2) **you will only have one LinkedIn account, which must be in your real name**; and (3) you are not already restricted by LinkedIn from using the Services. **Creating an account with false information is a violation of our terms**, including accounts registered on behalf of others or persons under the age of 16. "
+
+But this clause of their TOS is illegal in Germany (see beginning of this guide).
+
+-   Will they require a phone number? Yes they will.
+
+-   Can you create accounts through Tor? Yes but expect some captchas and your phone number will definitely be required
+
+LinkedIn is far less aggressive than twitter but will nonetheless require a valid e-mail (preferably again your Gmail) and a phone number in most cases (tho not always).
+
+LinkedIn however is relying a lot on reports and user/customer moderation. You should not create a profile with an occupation inside a private corporations or a small startup company. The company employees are monitoring LinkedIn activity and receive notifications when new people join. They can then report your profile as fake and your profile will then be suspended or banned pending appeal.
+
+LinkedIn will then require you go through a verification process that will unfortunately require you to send an ID proof (identity card, passport, driver license). This ID verification is processed by a company called Jumio[^208] that specializes in ID proofing. This is most likely a dead end as this would force you to develop some strong Photoshop skills.
+
+Instead you are far less likely to be reported if you just stay vague (say you're a student/intern/freelance) or pretend you work for a large public institution that is too large for anyone to care of check.
+
+As with Twitter and google, you should do the following after signing-up:
+
+-   Disable ads
+
+-   Disable notifications
+
+-   Disable lookup by phone/e-mail
+
+-   Upload a picture of your identity
+
+## Microsoft:
+
+-   Is this against their TOS? Yes <https://www.microsoft.com/en/servicesagreement/>
+
+"i. Creating an Account. You can create a Microsoft account by signing up online. You agree not to use any false, inaccurate or misleading information when signing up for your Microsoft account." But this clause of their TOS is illegal in Germany (see beginning of this guide).
+
+-   Will they require a phone number? Maybe but not always. Even on Tor depending on your luck/exit node, it's possible that they will only require e-mail verification.
+
+-   Can you create accounts through Tor? Yes you can but expect captchas, e-mail verification at least **and maybe phone verification.**
+
+So yes it's still possible to create an MS account without a phone number and using Tor or VPN but you might have cycle through a few exit nodes to achieve this.
+
+After signing-up you should setup 2FA authentication within security and using KeePassXC TOTP.
+
+## ProtonMail:
+
+-   Is this against their TOS? No [https://ProtonMail.com/terms-and-conditions]
+
+-   Will they require a phone number? Maybe. This depends on the IP you're coming from. If you come from Tor, it's likely. From a VPN, it's less likely.
+
+-   Can you create accounts through Tor? Yes but very likely that a phone number will be required when only an e-mail will be over a VPN.
+
+You obviously need an e-mail for your online identity and disposable e-mails are pretty much banned everywhere.
+
+ProtonMail is a free e-mail provider based in Switzerland that advocates security and privacy.
+
+They're recommended by privacytools.io[^209]. Their only apparent issue is that they do require (in most cases) a phone number or another e-mail address for registration (when you try to register from a VPN or Tor at least).
+
+They claim they do not store/link the phone/e-mail associated with the registration but only store a hash that is not linked to the account[^210]. As long as their claim is true and the hash is not linked to your account, and that you followed my guide regarding the Burner phone and the pre-paid SIM card, you should be safe from tracking.
+
+Create this e-mail account first using the burner phone as verification if necessary.
+
+When you're done creating the account, please go into the settings and enable 2FA (Two Factor Authentication). You will use KeePassXC TOTP feature (create a new entry "Identity ProtonMail TOTP" and just use the TOTP menu to set it up). Save the rescue codes within your KeePassXC entry.
+
+This e-mail account will be used in the next step for creating a Google/Gmail account.
+
+## Reddit:
+
+-   Is this against their TOS? No <https://www.redditinc.com/policies>
+
+-   Will they require a phone number? No they won't.
+
+-   Can you create accounts through Tor? Yes
+
+Reddit is simple. All you need to register is a valid username and a password. Normally they don't even require an e-mail (you can skip the e-mail when registering leaving it blank).
+
+You should still enable 2FA in the settings after signing-up. I had no issues whatsoever signing-up over Tor or VPN besides the occasional Captchas.
 
 ## Telegram:
 
@@ -2885,17 +2871,51 @@ After signing-up you should do the following:
 
 -   Set Group & Channels to Contacts
 
-## Reddit:
+## Twitter:
 
--   Is this against their TOS? No <https://www.redditinc.com/policies>
+-   Is this against their TOS? No <https://twitter.com/en/tos>
 
--   Will they require a phone number? No they won't.
+-   Will they require a phone number? They might not at sign-up but they will just after sign-up or a week or so later.
 
--   Can you create accounts through Tor? Yes
+-   Can you create accounts through Tor? Yes but expect some captchas and your phone number will definitely be required
 
-Reddit is simple. All you need to register is a valid username and a password. Normally they don't even require an e-mail (you can skip the e-mail when registering leaving it blank).
+Twitter is extremely aggressive in preventing anonymity on their network. You should sign-up using e-mail and password (not phone) and not using "Sign-in with Google". Use your Gmail as the e-mail address.
 
-You should still enable 2FA in the settings after signing-up. I had no issues whatsoever signing-up over Tor or VPN besides the occasional Captchas.
+More than likely, your account will be suspended immediately during the sign-up process and will require you to complete a series of automated tests to unlock. This will include a series of captchas, confirmation of your e-mail and twitter handle or other information. In some cases, it will also require your phone number.
+
+In some cases, despite you selecting a text verification, Twitter verification system will call the phone no matter what. In that case you'll have to pick up and actually hear the verification code. I suspect this is another method of preventing automated systems and malicious users from selling text receiving services over the internet.
+
+Twitter will store all this information and link it to your account including your IP, e-mail and phone number. You will not be able that phone number to create a different account.
+
+Once the account is restored, you should take some time to do the following:
+
+-   Upload the identity profile picture.
+
+-   Enable 2FA from the security settings using a new KeePassXC TOTP entry, save the security codes in KeePassXC as well.
+
+-   Disable Photo tagging
+
+-   Disable E-mail lookup
+
+-   Disable Phone lookup
+
+-   Disable all personalized advertising settings
+
+-   Disable geolocation of tweets
+
+-   Remove the phone number from the account
+
+-   Follow some people based
+
+-   Log out and leave it be.
+
+After about a week, you should check the twitter again and the chances are quite high that it will be suspended again for "suspicious activity" or "violating community guidelines" despite you not using it at all (not even a single tweet/follow/like/retweet or DM) but this time by another system. I call this the "Double tap".
+
+This time you will need to submit an appeal using a form [^211], provide a good reason and wait for the appeal to be processed by Twitter. During that process, it's possible that you will receive an e-mail (on ProtonMail) asking you to reply to a customer service ticket to prove that you do have access to your e-mail and that it's you. This will be directed toward your Gmail address but will arrive on your ProtonMail.
+
+Obviously do not reply from ProtonMail as this will raise suspicions, you have to sign-in into Gmail (unfortunately) and compose a new mail from there copy pasting the E-Mail, Subject and Content from ProtonMail. As well as a reply confirming you have access to that e-mail.
+
+After a few days, your account should get unsuspended "for good". I had no issues after that but keep in mind they can still ban your account for any reason if you violate the community guidelines. The phone number and e-mail will then be flagged and you will have no other option but to get a new identity with a new number to sign-up again. Don't use this account for trolling.
 
 ## 4chan:
 
@@ -3811,23 +3831,23 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
 
 [^202]: Tor Browser Documentation, <https://support.torproject.org/tbb/tbb-editing-torrc/>
 
-[^203]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
+[^203]: Facebook Onion Website <http://facebookcorewwwi.onion>
 
-[^204]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
+[^204]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
 
-[^205]: Google Help <https://support.google.com/accounts/answer/114129?hl=en>
+[^205]: Google Help <https://support.google.com/google-ads/answer/7474263?hl=en>
 
-[^206]: Google Help <https://support.google.com/google-ads/answer/7474263?hl=en>
+[^206]: Google, Your account is disabled <https://support.google.com/accounts/answer/40695>
 
-[^207]: Google, Your account is disabled <https://support.google.com/accounts/answer/40695>
+[^207]: Google, Request to restore the account <https://support.google.com/accounts/contact/disabled2>
 
-[^208]: Google, Request to restore the account <https://support.google.com/accounts/contact/disabled2>
+[^208]: Jumio, ID verification features <https://www.jumio.com/features/>
 
-[^209]: Twitter Appeal Form <https://help.twitter.com/forms/general>
+[^209]: Privacytools.io Recommended E-mail Providers <https://privacytools.io/providers/email/>
 
-[^210]: Jumio, ID verification features <https://www.jumio.com/features/>
+[^210]: ProtonMail Human Verification System [https://ProtonMail.com/support/knowledge-base/human-verification/]
 
-[^211]: Facebook Onion Website <http://facebookcorewwwi.onion>
+[^211]: Twitter Appeal Form <https://help.twitter.com/forms/general>
 
 [^212]: Youwave, <https://youwave.com/>
 
@@ -3921,17 +3941,18 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
   [Manual reviews:]: #manual-reviews
   [Getting Online:]: #getting-online
   [Creating new identities:]: #creating-new-identities
-  [ProtonMail:]: #protonmail
-  [Google:]: #google
-  [Twitter:]: #twitter
-  [LinkedIn:]: #linkedin
-  [Microsoft:]: #microsoft
-  [Instagram:]: #instagram
+  [Overview:]: #overview
+  [Discord:]: #discord
   [Facebook:]: #facebook
   [GitHub:]: #github
-  [Discord:]: #discord
-  [Telegram:]: #telegram
+  [Google:]: #google
+  [Instagram:]: #instagram
+  [LinkedIn:]: #linkedin
+  [Microsoft:]: #microsoft
+  [ProtonMail:]: #protonmail
   [Reddit:]: #reddit
+  [Telegram:]: #telegram
+  [Twitter:]: #twitter
   [4chan:]: #chan
   [Crypto Wallets:]: #crypto-wallets
   [What about those mobile only apps (Whatsapp/Signal):]: #what-about-those-mobile-only-apps-whatsappsignal
