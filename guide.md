@@ -1079,7 +1079,7 @@ Well, all those Apps and your Operating System will keep logs and traces of that
 
 A very good example of this are the Windows "ShellBags" that are stored within the Windows Registry storing various histories of accessed files/folders[^170].
 
-Forensics can[^168] and will[^170] use all those leaks[^166] to prove the existence of hidden data and defeat your attempts at using plausible deniability.
+Forensics can and will use all those leaks to prove the existence of hidden data and defeat your attempts at using plausible deniability.
 
 It will be therefore important to apply various steps to prevent forensics from doing this by preventing and cleaning these leaks/traces. This will be covered in the "Cover your Tracks" part of this guide at the very end.
 
@@ -1093,7 +1093,7 @@ In the case of Windows, this data could easily be used to prove the existence of
 
 #### Deciding which sub-route you'll take:
 
-Remember that plausible deniability is not a silver bullet and will be of little use in case of torture[^5]. As a matter a fact, depending on who your adversary would be (your threat model), it might be wise not to use Veracrypt at all as shown in this demonstration: <https://defuse.ca/truecrypt-plausible-deniability-useless-by-game-theory.htm>
+Remember that plausible deniability is not a silver bullet and will be of little use in case of torture. As a matter a fact, depending on who your adversary would be (your threat model), it might be wise not to use Veracrypt at all as shown in this demonstration: <https://defuse.ca/truecrypt-plausible-deniability-useless-by-game-theory.htm>
 
 Now you'll have to pick your next step between two options:
 
@@ -1189,7 +1189,7 @@ This route is rather straightforward and will just encrypt your current Operatin
 
 -   Select SHA-512 as hash Algorithm (because why not)
 
--   Enter a strong passphrase (longer the better)[^153]
+-   Enter a strong passphrase (longer the better)
 
 -   Collect some entropy by randomly moving your cursor around until the bar is full
 
@@ -1291,7 +1291,7 @@ Do not connect this OS to your known Wi-Fi. You should download Veracrypt instal
 
 -   Use all the space available on the second partition for the Outer Volume
 
--   Use a strong passphrase[^153]
+-   Use a strong passphrase
 
 -   Select yes to Large Files
 
@@ -1305,7 +1305,7 @@ Do not connect this OS to your known Wi-Fi. You should download Veracrypt instal
 
     -   I recommend you don't fill the outer volume too much or too little (about 40%). Remember you have to leave enough space for the Hidden OS (which will be same size as the first partition you created during installation).
 
--   Use a strong passphrase[^153] for the Hidden Volume (obviously a different one than the one for the Outer Volume).
+-   Use a strong passphrase for the Hidden Volume (obviously a different one than the one for the Outer Volume).
 
 -   Now you will create the Hidden Volume, select AES and SHA-512
 
@@ -2093,499 +2093,7 @@ Always use uppercase letter for any setting.
 
 **Please note that this is restricting Onion Routing could limit your Anonymity if you're too restrictive. You can see a visualized list of available Exit Nodes here: <https://www.bigdatacloud.com/insights/tor-exit-nodes>**
 
-Here is the list of possibilities (this is a general list and many of those countries might not have Exit nodes at all):
-
--   ASCENSION ISLAND {ac}
-
--   AFGHANISTAN {af}
-
--   ALAND {ax}
-
--   ALBANIA {al}
-
--   ALGERIA {dz}
-
--   ANDORRA {ad}
-
--   ANGOLA {ao}
-
--   ANGUILLA {ai}
-
--   ANTARCTICA {aq}
-
--   ANTIGUA AND BARBUDA {ag}
-
--   ARGENTINA REPUBLIC {ar}
-
--   ARMENIA {am}
-
--   ARUBA {aw}
-
--   AUSTRALIA {au}
-
--   AUSTRIA {at}
-
--   AZERBAIJAN {az}
-
--   BAHAMAS {bs}
-
--   BAHRAIN {bh}
-
--   BANGLADESH {bd}
-
--   BARBADOS {bb}
-
--   BELARUS {by}
-
--   BELGIUM {be}
-
--   BELIZE {bz}
-
--   BENIN {bj}
-
--   BERMUDA {bm}
-
--   BHUTAN {bt}
-
--   BOLIVIA {bo}
-
--   BOSNIA AND HERZEGOVINA {ba}
-
--   BOTSWANA {bw}
-
--   BOUVET ISLAND {bv}
-
--   BRAZIL {br}
-
--   BRITISH INDIAN OCEAN TERR {io}
-
--   BRITISH VIRGIN ISLANDS {vg}
-
--   BRUNEI DARUSSALAM {bn}
-
--   BULGARIA {bg}
-
--   BURKINA FASO {bf}
-
--   BURUNDI {bi}
-
--   CAMBODIA {kh}
-
--   CAMEROON {cm}
-
--   CANADA {ca}
-
--   CAPE VERDE {cv}
-
--   CAYMAN ISLANDS {ky}
-
--   CENTRAL AFRICAN REPUBLIC {cf}
-
--   CHAD {td}
-
--   CHILE {cl}
-
--   PEOPLE\'S REPUBLIC OF CHINA {cn}
-
--   CHRISTMAS ISLANDS {cx}
-
--   COCOS ISLANDS {cc}
-
--   COLOMBIA {co}
-
--   COMORAS {km}
-
--   CONGO {cg}
-
--   CONGO (DEMOCRATIC REPUBLIC) {cd}
-
--   COOK ISLANDS {ck}
-
--   COSTA RICA {cr}
-
--   COTE D IVOIRE {ci}
-
--   CROATIA {hr}
-
--   CUBA {cu}
-
--   CYPRUS {cy}
-
--   CZECH REPUBLIC {cz}
-
--   DENMARK {dk}
-
--   DJIBOUTI {dj}
-
--   DOMINICA {dm}
-
--   DOMINICAN REPUBLIC {do}
-
--   EAST TIMOR {tp}
-
--   ECUADOR {ec}
-
--   EGYPT {eg}
-
--   EL SALVADOR {sv}
-
--   EQUATORIAL GUINEA {gq}
-
--   ESTONIA {ee}
-
--   ETHIOPIA {et}
-
--   FALKLAND ISLANDS {fk}
-
--   FAROE ISLANDS {fo}
-
--   FIJI {fj}
-
--   FINLAND {fi}
-
--   FRANCE {fr}
-
--   FRANCE METROPOLITAN {fx}
-
--   FRENCH GUIANA {gf}
-
--   FRENCH POLYNESIA {pf}
-
--   FRENCH SOUTHERN TERRITORIES {tf}
-
--   GABON {ga}
-
--   GAMBIA {gm}
-
--   GEORGIA {ge}
-
--   GERMANY {de}
-
--   GHANA {gh}
-
--   GIBRALTER {gi}
-
--   GREECE {gr}
-
--   GREENLAND {gl}
-
--   GRENADA {gd}
-
--   GUADELOUPE {gp}
-
--   GUAM {gu}
-
--   GUATEMALA {gt}
-
--   GUINEA {gn}
-
--   GUINEA-BISSAU {gw}
-
--   GUYANA {gy}
-
--   HAITI {ht}
-
--   HEARD & MCDONALD ISLAND {hm}
-
--   HONDURAS {hn}
-
--   HONG KONG {hk}
-
--   HUNGARY {hu}
-
--   ICELAND {is}
-
--   INDIA {in}
-
--   INDONESIA {id}
-
--   IRAN, ISLAMIC REPUBLIC OF {ir}
-
--   IRAQ {iq}
-
--   IRELAND {ie}
-
--   ISLE OF MAN {im}
-
--   ISRAEL {il}
-
--   ITALY {it}
-
--   JAMAICA {jm}
-
--   JAPAN {jp}
-
--   JORDAN {jo}
-
--   KAZAKHSTAN {kz}
-
--   KENYA {ke}
-
--   KIRIBATI {ki}
-
--   KOREA, DEM. PEOPLES REP OF {kp}
-
--   KOREA, REPUBLIC OF {kr}
-
--   KUWAIT {kw}
-
--   KYRGYZSTAN {kg}
-
--   LAO PEOPLE\'S DEM. REPUBLIC {la}
-
--   LATVIA {lv}
-
--   LEBANON {lb}
-
--   LESOTHO {ls}
-
--   LIBERIA {lr}
-
--   LIBYAN ARAB JAMAHIRIYA {ly}
-
--   LIECHTENSTEIN {li}
-
--   LITHUANIA {lt}
-
--   LUXEMBOURG {lu}
-
--   MACAO {mo}
-
--   MACEDONIA {mk}
-
--   MADAGASCAR {mg}
-
--   MALAWI {mw}
-
--   MALAYSIA {my}
-
--   MALDIVES {mv}
-
--   MALI {ml}
-
--   MALTA {mt}
-
--   MARSHALL ISLANDS {mh}
-
--   MARTINIQUE {mq}
-
--   MAURITANIA {mr}
-
--   MAURITIUS {mu}
-
--   MAYOTTE {yt}
-
--   MEXICO {mx}
-
--   MICRONESIA {fm}
-
--   MOLDAVA REPUBLIC OF {md}
-
--   MONACO {mc}
-
--   MONGOLIA {mn}
-
--   MONTENEGRO {me}
-
--   MONTSERRAT {ms}
-
--   MOROCCO {ma}
-
--   MOZAMBIQUE {mz}
-
--   MYANMAR {mm}
-
--   NAMIBIA {na}
-
--   NAURU {nr}
-
--   NEPAL {np}
-
--   NETHERLANDS ANTILLES {an}
-
--   NETHERLANDS, THE {nl}
-
--   NEW CALEDONIA {nc}
-
--   NEW ZEALAND {nz}
-
--   NICARAGUA {ni}
-
--   NIGER {ne}
-
--   NIGERIA {ng}
-
--   NIUE {nu}
-
--   NORFOLK ISLAND {nf}
-
--   NORTHERN MARIANA ISLANDS {mp}
-
--   NORWAY {no}
-
--   OMAN {om}
-
--   PAKISTAN {pk}
-
--   PALAU {pw}
-
--   PALESTINE {ps}
-
--   PANAMA {pa}
-
--   PAPUA NEW GUINEA {pg}
-
--   PARAGUAY {py}
-
--   PERU {pe}
-
--   PHILIPPINES (REPUBLIC OF THE) {ph}
-
--   PITCAIRN {pn}
-
--   POLAND {pl}
-
--   PORTUGAL {pt}
-
--   PUERTO RICO {pr}
-
--   QATAR {qa}
-
--   REUNION {re}
-
--   ROMANIA {ro}
-
--   RUSSIAN FEDERATION {ru}
-
--   RWANDA {rw}
-
--   SAMOA {ws}
-
--   SAN MARINO {sm}
-
--   SAO TOME/PRINCIPE {st}
-
--   SAUDI ARABIA {sa}
-
--   SCOTLAND {uk}
-
--   SENEGAL {sn}
-
--   SERBIA {rs}
-
--   SEYCHELLES {sc}
-
--   SIERRA LEONE {sl}
-
--   SINGAPORE {sg}
-
--   SLOVAKIA {sk}
-
--   SLOVENIA {si}
-
--   SOLOMON ISLANDS {sb}
-
--   SOMALIA {so}
-
--   SOMOA,GILBERT,ELLICE ISLANDS {as}
-
--   SOUTH AFRICA {za}
-
--   SOUTH GEORGIA, SOUTH SANDWICH ISLANDS {gs}
-
--   SOVIET UNION {su}
-
--   SPAIN {es}
-
--   SRI LANKA {lk}
-
--   ST. HELENA {sh}
-
--   ST. KITTS AND NEVIS {kn}
-
--   ST. LUCIA {lc}
-
--   ST. PIERRE AND MIQUELON {pm}
-
--   ST. VINCENT & THE GRENADINES {vc}
-
--   SUDAN {sd}
-
--   SURINAME {sr}
-
--   SVALBARD AND JAN MAYEN {sj}
-
--   SWAZILAND {sz}
-
--   SWEDEN {se}
-
--   SWITZERLAND {ch}
-
--   SYRIAN ARAB REPUBLIC {sy}
-
--   TAIWAN {tw}
-
--   TAJIKISTAN {tj}
-
--   TANZANIA, UNITED REPUBLIC OF {tz}
-
--   THAILAND {th}
-
--   TOGO {tg}
-
--   TOKELAU {tk}
-
--   TONGA {to}
-
--   TRINIDAD AND TOBAGO {tt}
-
--   TUNISIA {tn}
-
--   TURKEY {tr}
-
--   TURKMENISTAN {tm}
-
--   TURKS AND CALCOS ISLANDS {tc}
-
--   TUVALU {tv}
-
--   UGANDA {ug}
-
--   UKRAINE {ua}
-
--   UNITED ARAB EMIRATES {ae}
-
--   UNITED KINGDOM (no new registrations) {gb}
-
--   UNITED KINGDOM {uk}
-
--   UNITED STATES {us}
-
--   UNITED STATES MINOR OUTL.IS. {um}
-
--   URUGUAY {uy}
-
--   UZBEKISTAN {uz}
-
--   VANUATU {vu}
-
--   VATICAN CITY STATE {va}
-
--   VENEZUELA {ve}
-
--   VIET NAM {vn}
-
--   VIRGIN ISLANDS (USA) {vi}
-
--   WALLIS AND FUTUNA ISLANDS {wf}
-
--   WESTERN SAHARA {eh}
-
--   YEMEN {ye}
-
--   ZAMBIA {zm}
-
--   ZIMBABWE {zw}
+Here is the list of possibilities (this is a general list and many of those countries might not have Exit nodes at all): <https://b3rn3d.herokuapp.com/blog/2014/03/05/tor-country-codes/>
 
 ## Overview:
 
@@ -3197,9 +2705,9 @@ Feel free do go with DBAN instead if you want, the process is basically the same
 
 -   Keep a normal life and don't be weird. If you spend all your online time using Tor to access the internet and have no social network accounts at all ... You're already suspicious and attracting unnecessary attention.
 
--   Encrypt everything but don't take it as granted. Remember the 5\$ wrench[^5] .
+-   Encrypt everything but don't take it as granted. Remember the 5\$ wrench .
 
--   Keep plausible deniability as an option but remember it won't help against the 5\$ wrench either[^5].
+-   Keep plausible deniability as an option but remember it won't help against the 5\$ wrench either.
 
 -   Never ever leave your laptop unattended/on/unlocked anywhere. Remember the story of Ross Ulbricht and his arrest <https://en.wikipedia.org/wiki/Ross_Ulbricht#Silk_Road,_arrest_and_trial>
 
@@ -3825,7 +3333,7 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
 
 [^199]: The Verge, Tinder will give you a verified blue check mark if you pass its catfishing test <https://www.theverge.com/2020/1/23/21077423/tinder-photo-verification-blue-checkmark-safety-center-launch-noonlight>
 
-[^200]: DigitalInformationWorld, Facebook will now Require you to Create a Video Selfie for Identity Verification! <https://www.digitalinformationworld.com/2020/03/facebook-is-now-demanding-some-users-to-create-a-video-selfie-for-identity-verification.html#>
+[^200]: DigitalInformationWorld, Facebook will now Require you to Create a Video Selfie for Identity Verification! [https://www.digitalinformationworld.com/2020/03/facebook-is-now-demanding-some-users-to-create-a-video-selfie-for-identity-verification.html\#]
 
 [^201]: Whonix Documentation, <https://www.whonix.org/wiki/Tor#Edit_Tor_Configuration>
 
@@ -4000,4 +3508,5 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
   [15]: media/image14.jpeg
   [16]: media/image15.jpeg
   [https://ProtonMail.com/terms-and-conditions]: https://protonmail.com/terms-and-conditions
+  [https://www.digitalinformationworld.com/2020/03/facebook-is-now-demanding-some-users-to-create-a-video-selfie-for-identity-verification.html\#]: https://www.digitalinformationworld.com/2020/03/facebook-is-now-demanding-some-users-to-create-a-video-selfie-for-identity-verification.html
   [https://ProtonMail.com/support/knowledge-base/human-verification/]: https://protonmail.com/support/knowledge-base/human-verification/
