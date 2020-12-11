@@ -15,14 +15,14 @@
     -   [Your Devices can be tracked even when completely powered off:]
     -   [Your RFID enabled devices:]
     -   [Your Files Properties/Metadata:]
-    -   [Your pixelized/blurred information:]
+    -   [Your Pixelized/Blurred Information:]
     -   [Your "Anonymized" Tor/VPN traffic:]
     -   [Your Crypto transactions:]
     -   [Exploits in your apps:]
     -   [Your CPU:]
     -   [Your Cloud backups/sync services:]
     -   [Your Digital Fingerprint and Footprint:]
-    -   [Your clues about your real Life:]
+    -   [Your Clues about your Real Life:]
     -   [Your Browser and Device Fingerprints:]
     -   [Your Face and other Biometrics:]
     -   [Phishing:]
@@ -121,7 +121,7 @@
 
 (or "How I learned to start worrying and love privacy")
 
-Version 0.1.9 (draft), December 2020 (work in progress, some parts are incomplete) by AnonymousPlanet.
+Version 0.1.10 (draft), December 2020 (work in progress, some parts are incomplete) by AnonymousPlanet.
 
 This guide is open-source, licensed under Creative Commons Attribution 4.0 International (cc-by-4.0).
 
@@ -176,6 +176,8 @@ This guide is not intended for:
 -   Helping malicious individuals conduct unlawful or unethical activities (such as trolling).
 
 -   Use by minors.
+
+If you go through with this long read including the many references, I believe you'll understand most of the current online privacy and anonymity issues.
 
 Feel free to report issues, recommend improvements or start a discussion on the GitHub repository if you want.
 
@@ -457,7 +459,7 @@ Here is a tutorial to remove metadata from Office documents: <https://support.mi
 
 Here is a tutorial to remove metadata from a Picture using OS provided tools: <https://www.purevpn.com/internet-privacy/how-to-remove-metadata-from-photos>
 
-## Your pixelized/blurred information:
+## Your Pixelized/Blurred Information:
 
 Did you ever see a document with blurred text? Did you ever make fun of those movies/series where they "enhance" an image to recover seemingly impossible to read information.
 
@@ -583,7 +585,7 @@ This technology is also widely used used in CAPTCHAS[^186] services to verify th
 
 Analysis algorithms could then be used to match these patterns with other users and match you to a different known user. It's unclear if such data is used or not by Governments and Law Enforcements agencies but it might be in the future. And while this might only be used for advertising/marketing purposes now. It could and probably will be used for investigations in the short or mid-term future.
 
-## Your clues about your real Life:
+## Your Clues about your Real Life:
 
 These are clues you might give over time that could point to your real identity. You might be talking to someone or posting on some board/forum/reddit. In those posts you might over time leak some information about your real life. These might be memories, experiences or clues you shared that could then allow a motivated adversary to build a profile to narrow their search.
 
@@ -597,13 +599,21 @@ You should never ever share real personal experiences/details that could later l
 
 Your Browser and Device Fingerprints[^196] are set of properties/capabilities of your System/Browser. These are used on most websites for invisible user tracking but also to adapt the website user experience depending on their browser. For instance websites will be able to provide a "mobile experience" if you're using a mobile browser or propose a specific language/geographic version depending on your fingerprint. Most of those techniques work with recent Browsers like Chromium[^116] based browsers (such as Chrome) or Firefox[^117] unless taking special measures.
 
-You can find a lot of detailed information and publications about this here: <https://amiunique.org/links>
+You can find a lot of detailed information and publications about this on these ressources:
+
+-   <https://amiunique.org/links>
+
+-   <https://brave.com/brave-fingerprinting-and-privacy-budgets/>
 
 Most of the time, those fingerprints will unfortunately be unique or nearly unique to your Browser/System. This means that even If you log out from a website and then log back in using a different username, your fingerprint might remain the same if you didn't take precautionary measures.
 
 An adversary could then use such fingerprints to track you across multiple services even if you have no account on any of them and are using ad blocking. These fingerprints could in turn be used to de-anonymize you if you keep the same fingerprint between services.
 
-This guide will mitigate these issues by obfuscating/randomizing many of those identifiers by using Virtualization and also using by fingerprinting resistant Browsers.
+It should also be noted that while some browsers and extensions will offer fingerprint resistance, this resistance in itself can also be used to fingerprint you as explained here <https://palant.info/2020/12/10/how-anti-fingerprinting-extensions-tend-to-make-fingerprinting-easier/>
+
+This guide will mitigate these issues by mitigating, obfuscating and randomizing many of those fingerprinting identifiers by using Virtualization and also using by fingerprinting resistant Browsers.
+
+Note that
 
 ## Your Face and other Biometrics:
 
@@ -1079,7 +1089,7 @@ Well, all those Apps and your Operating System will keep logs and traces of that
 
 A very good example of this are the Windows "ShellBags" that are stored within the Windows Registry storing various histories of accessed files/folders[^170].
 
-Forensics can and will use all those leaks to prove the existence of hidden data and defeat your attempts at using plausible deniability.
+Forensics can[^168] and will[^170] use all those leaks[^166] to prove the existence of hidden data and defeat your attempts at using plausible deniability.
 
 It will be therefore important to apply various steps to prevent forensics from doing this by preventing and cleaning these leaks/traces. This will be covered in the "Cover your Tracks" part of this guide at the very end.
 
@@ -1093,7 +1103,7 @@ In the case of Windows, this data could easily be used to prove the existence of
 
 #### Deciding which sub-route you'll take:
 
-Remember that plausible deniability is not a silver bullet and will be of little use in case of torture. As a matter a fact, depending on who your adversary would be (your threat model), it might be wise not to use Veracrypt at all as shown in this demonstration: <https://defuse.ca/truecrypt-plausible-deniability-useless-by-game-theory.htm>
+Remember that plausible deniability is not a silver bullet and will be of little use in case of torture[^5]. As a matter a fact, depending on who your adversary would be (your threat model), it might be wise not to use Veracrypt at all as shown in this demonstration: <https://defuse.ca/truecrypt-plausible-deniability-useless-by-game-theory.htm>
 
 Now you'll have to pick your next step between two options:
 
@@ -1189,7 +1199,7 @@ This route is rather straightforward and will just encrypt your current Operatin
 
 -   Select SHA-512 as hash Algorithm (because why not)
 
--   Enter a strong passphrase (longer the better)
+-   Enter a strong passphrase (longer the better)[^153]
 
 -   Collect some entropy by randomly moving your cursor around until the bar is full
 
@@ -1291,7 +1301,7 @@ Do not connect this OS to your known Wi-Fi. You should download Veracrypt instal
 
 -   Use all the space available on the second partition for the Outer Volume
 
--   Use a strong passphrase
+-   Use a strong passphrase[^153]
 
 -   Select yes to Large Files
 
@@ -1305,7 +1315,7 @@ Do not connect this OS to your known Wi-Fi. You should download Veracrypt instal
 
     -   I recommend you don't fill the outer volume too much or too little (about 40%). Remember you have to leave enough space for the Hidden OS (which will be same size as the first partition you created during installation).
 
--   Use a strong passphrase for the Hidden Volume (obviously a different one than the one for the Outer Volume).
+-   Use a strong passphrase[^153] for the Hidden Volume (obviously a different one than the one for the Outer Volume).
 
 -   Now you will create the Hidden Volume, select AES and SHA-512
 
@@ -2705,9 +2715,9 @@ Feel free do go with DBAN instead if you want, the process is basically the same
 
 -   Keep a normal life and don't be weird. If you spend all your online time using Tor to access the internet and have no social network accounts at all ... You're already suspicious and attracting unnecessary attention.
 
--   Encrypt everything but don't take it as granted. Remember the 5\$ wrench .
+-   Encrypt everything but don't take it as granted. Remember the 5\$ wrench[^5] .
 
--   Keep plausible deniability as an option but remember it won't help against the 5\$ wrench either.
+-   Keep plausible deniability as an option but remember it won't help against the 5\$ wrench either[^5].
 
 -   Never ever leave your laptop unattended/on/unlocked anywhere. Remember the story of Ross Ulbricht and his arrest <https://en.wikipedia.org/wiki/Ross_Ulbricht#Silk_Road,_arrest_and_trial>
 
@@ -3386,14 +3396,14 @@ These are the steps to create a Windows 10 (20H2) Installation Media using this 
   [Your Devices can be tracked even when completely powered off:]: #your-devices-can-be-tracked-even-when-completely-powered-off
   [Your RFID enabled devices:]: #your-rfid-enabled-devices
   [Your Files Properties/Metadata:]: #your-files-propertiesmetadata
-  [Your pixelized/blurred information:]: #your-pixelizedblurred-information
+  [Your Pixelized/Blurred Information:]: #your-pixelizedblurred-information
   [Your "Anonymized" Tor/VPN traffic:]: #your-anonymized-torvpn-traffic
   [Your Crypto transactions:]: #your-crypto-transactions
   [Exploits in your apps:]: #exploits-in-your-apps
   [Your CPU:]: #your-cpu
   [Your Cloud backups/sync services:]: #your-cloud-backupssync-services
   [Your Digital Fingerprint and Footprint:]: #your-digital-fingerprint-and-footprint
-  [Your clues about your real Life:]: #your-clues-about-your-real-life
+  [Your Clues about your Real Life:]: #your-clues-about-your-real-life
   [Your Browser and Device Fingerprints:]: #your-browser-and-device-fingerprints
   [Your Face and other Biometrics:]: #your-face-and-other-biometrics
   [Phishing:]: #phishing
